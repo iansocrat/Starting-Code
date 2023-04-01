@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Admin UI</title>
+</head>
+<body>
+  <h1>Users</h1>
+  <ul>
+    <% users.forEach(function(user) { %>
+      <li><%= user.name %></li>
+    <% }); %>
+    <!-- admin.ejs -->
+<h1>Admin Panel</h1>
+<ul>
+  <% for (let i = 0; i < users.length; i++) { %>
+    <li><%= users[i].name %> - <%= users[i].email %></li>
+  <% } %>
+</ul>
+<!-- admin.ejs template -->
+
+    <h1>Admin Panel</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach((user) => { %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.role %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  
+  </ul>
+</body>
+</html>
