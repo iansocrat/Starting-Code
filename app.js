@@ -58,7 +58,6 @@ const { use } = require("passport");
 const { title } = require("node:process");
 const { cookie } = require("request");
 const cookieParser = require("cookie-parser");
-const userinputs = require("./dfarms/models/userinputs");
 const app = express();
 app.use(express.static(__dirname + "/public"));
 app.set('views',path.join(__dirname,'views'))
